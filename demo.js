@@ -3,6 +3,16 @@ function displayNumberofwords(event){
     let length=string.length;
     let remainingcharacters= maxAllowedCharacters - length;
     remainingcharsElement.textContent=remainingcharacters;
+
+    if(remainingcharacters <=10){
+        remainingcharsElement.classList.add('warning');
+        productNameInputElement.classList.add('warning');
+    }
+    else if(remainingcharacters>=10){
+        remainingcharsElement.classList.remove('warning');
+        productNameInputElement.classList.remove('warning');
+
+    }
     
 }
 
